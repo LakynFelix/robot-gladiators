@@ -11,21 +11,21 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames.length);
+// console.log(enemyNames[0]);
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
+// console.log(enemyNames.length); 
 
-fight(enemyRobot);
 
-for(var i = 0; i < enemyNames.length; i++) {
-    fight(enemyNames[i]);
-  }
+
+// fight function statements
+
+
+ 
 
 // fight function
+
 var fight = function(enemyName) {
-     // fight function statements
-  }
   window.alert("Welcome to Robot Gladiators!");
 
   // ask player if they'd like to fight or run
@@ -77,7 +77,10 @@ var fight = function(enemyName) {
   } else {
     window.alert("You need to pick a valid option. Try again!");
   }
-
+}
+  for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
 
 // run fight function to start game
 fight()
