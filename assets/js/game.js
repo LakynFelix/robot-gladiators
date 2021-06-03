@@ -12,7 +12,9 @@ console.log(enemyNames.length);
 console.log(enemyNames[0]);
 console.log(enemyNames[3]);
 
-var startGame= function () {
+
+var startGame=function() {
+ 
 // fight function (now with parameter for enemy's name)
 var fight = function(enemyName) {
   while (playerHealth > 0 && enemyHealth > 0) {
@@ -20,7 +22,7 @@ var fight = function(enemyName) {
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
     // if player picks "skip" confirm and then stop the loop
-    if (promptFight === "skip" || promptFight === "TRUE") {
+    if (promptFight === "skip" || promptFight === "SKIP") {
       // confirm player wants to skip
       var confirmSkip = window.confirm("Are you sure you'd like to quit?");
 
@@ -29,7 +31,7 @@ var fight = function(enemyName) {
         window.alert(playerName + ' has decided to skip this fight. Goodbye!');
         // subtract money from playerMoney for skipping
         playerMoney = playerMoney - 10;
-        console.log("playerMoney", playerMoney);+
+        console.log("playerMoney", playerMoney);
         break;
       }
     }
@@ -95,3 +97,5 @@ for (var i = 0; i < enemyNames.length; i++) {
     break;
   }
 }
+}
+startGame();
