@@ -19,6 +19,9 @@ var startGame=function() {
 var fight = function(enemyName) {
   while (playerHealth > 0 && enemyHealth > 0) {
     // ask player if they'd like to fight or run
+    if (playerHealth > 0) {
+      window.alert("Welcome to Robot Gladiators! Round " + ( i + 1 ) );
+    }
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
     // if player picks "skip" confirm and then stop the loop
